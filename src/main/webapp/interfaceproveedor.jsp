@@ -7,45 +7,41 @@
 <title>Insert title here</title>
 </head>
 <body>
-<header class="vsta">
-  <div class="container">
-  <nav class="nav">
-  <a href="#" class="nav_usuario">Usuario</a>
-  <a href="#" class="nav_cliente">Cliente</a>
-  <a href="#" class="nav_proveedor">Proveedor</a>
-  <a hrer="#" class="nav_producto">Productos</a>
-  <a href="#" class="nav_ventas">Ventas</a>
-  <a href="#" class="nav_reportes">Reportes</a>
-  
-  
-  </nav>
+<header class="container">
+  <div class="container_div">
+    <nav class="nav">
+      <ul >
+          <li><a href="menuprincipla.jsp"class="nav_inicio">Inicio</a></li>
+     </ul>
+    </nav>
+ </div>
 
-  </div>
- <section class="vista_text">
- <div class="contend">
- <h1 class="">Quienes Somos </h1>
- <p class="">Somos una empresa dedicada hace más de 20 años a la importación y distribución de componentes electrónicos de alta calidad,
-                           totalmente garantizados y respaldados en busca de la perfecta aplicación del elemento adquirido.
-                           Nuestro mayor objetivo es satisfacer las necesidades de nuestros clientes ofreciéndoles productos de última tecnología,
-                            innovación y garantía de manera que se tenga confianza al 100 % en nuestro servicio.
-		                    Nos caracterizamos por la calidad, seriedad y cumplimiento efectivo en el trabajo que realizamos.</p>
+ <div>
+ <form>
+ <input type="text" name="btnnit" value="Nit" placeholder="Ingrese nit">
+ <input type="text" name="btnnombre" value="Nombre Completo" placeholder="Ingrese nombre">
+ <input type="text" name="btndireccion" value="Direccion" placeholder="Ingresar Direccion">
+ <input type="text" name="btntelefono" value="Telefono" placeholder="Ingresar Telefono ">
+ <input type="text" name="btncorreo" value="correo"placeholder="Ingresar correo">
+ <input type="submit"name="btncrear"value="Crear">
+ <input type="submit" name="btnconsultar"value="Consultar">
+ <input type="submit" name="btnactualizar"value="Actualizar">
+ <input type="submit" name="btnborrar"value="Eliminar">
+ 
+ 
+ </form>
+ 
+ 
+ 
  
  </div>
- 
- 
- 
- 
- </section> 
-
-
-
-
-
 
 
 
 
 
 </header>
+
 </body>
 </html>
+
