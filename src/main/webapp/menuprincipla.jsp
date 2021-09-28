@@ -16,7 +16,7 @@
     <nav class="nav">
       <ul>
         <li>  <a href="#" class="nav_usuario">Usuario</a> </li>	
-        <li> <a href="#" class="nav_cliente">Cliente </a></li>
+        <li> <a href="interface_cliente.jsp" class="nav_cliente">Cliente </a></li>
   	    <li><a href="interfaceproveedor.jsp" class="nav_proveedor">Proveedor</a></li>
   	    <li><a href="#" class="nav_producto">Productos</a></li>
   	    <li> <a href="#" class="nav_ventas">Ventas</a></li>
