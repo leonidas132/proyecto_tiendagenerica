@@ -5,7 +5,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/stylesmenu.css">
 <meta charset="ISO-8859-1">
-<meta http-equiv="X-AU-Compatiblle" content="IE=edge">
+<meta http-equiv="X-AU-Compatible" content="IE=edge">
 <meta name="viewport" content="widht=device-width, initial-scale= 1.0">
 <title>Insert title here</title>
 

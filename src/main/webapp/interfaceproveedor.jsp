@@ -3,7 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css"href="css/stylesproveedor.css">
 <meta charset="ISO-8859-1">
+<meta http-equiv="X-AU-Compatible"content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Insert title here</title>
 </head>
 <body>
@@ -15,33 +18,81 @@
      </ul>
     </nav>
  </div>
+ </header>
+<main>
+   
+   <form action="" class="formulario"id="formulario">
+   
+    <!-- grupo nit -->
+    
+      <div class="formulario__grupo" id="grupo_nit">
+         <label for="nit" class="formulario__label">Nit</label>
+          <div class="formulario__grupo-input">
+             <input type="text" name="nit" class="formulario__input" id="nit" placeholder="ingrese nit">
+               <i class="formulario__validacion-estado fas fa-times-circle"></i>
+         </div>
+         <p class="formulario__input-error">El nit tiene que ser de 4 a 10 digitos y solo puede contener numeros, letras y guion bajo</p>
+     </div>
+     
+    <!--Grupo nombre -->
+      <div class="formulario__grupo" id="grupo__nombre">
+           <label for="nombre" class="formulario__label">Nombre</label>
+           <div class="formulario__grupo-input">
+                <input type="text" name="nombre" class="formulario__input" id="nombre" placeholder="ingrese nombre">
+                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
+       	   </div>
+           <p class="formulario__input-error">El nombretiene que ser de 4 a 20 digitos y solo puede contener  letras </p>
+       </div>
+       
+        <!-- Grupo direccion -->
+      <div class="formulario__grupo" id="grupo__direccion">
+         <label for="direccion" class="formulario__label">Direccion</label>
+         <div class="formulario__grupo-input">
+             <input type="text" name="direccion" class="formulario__input" id="direccion" placeholder="cll 20-No 20-40a">
+             <i class="formulario__validacion-estado fas fa-times-circle"></i>
+         </div>
+         <p class="formulario__input-error">La direccion tiene que ser de 10 a 20 digitos y solo puede contener numeros, letras </p>
+      </div> 
+      
+            <!-- Grupo telefono -->
+      <div class="formulario__grupo" id="grupo__telefono">
+         <label for="telefono" class="formulario__label">Telefono</label>
+         <div class="formulario__grupo-input">
+             <input type="text" name="telefono" class="formulario__input" id="telefono" placeholder="12358955">
+             <i class="formulario__validacion-estado fas fa-times-circle"></i>
+         </div>
+         <p class="formulario__input-error">El telefono tiene que ser de 14 digitos </p>  
+      </div>    
+            
+            <!-- Grupo ciudad -->
+      <div class="formulario__grupo-1" id="grupo__ciudad">
+          <label for="cuidad" class="formulario__label">Ciudad</label>
+          <div class="formulario__grupo-input">
+             <input type="text" name="ciudad" class="formulario__input" id="ciudad" placeholder="Bogota-colombia">
+             <i class="formulario__validacion-estado fas fa-times-circle"></i>
+         </div>
+         <p class="formulario__input-error">Este campo debe contener de 10 a 20 digitos y solo pueden contenr letras  </p>  
+      </div>  
+       
+            <!--mensajes y botones-->
+     
+      <div class="formulario_mensaje" id="formulario_mensaje">
+         <p ><i class="fas fa-exclamation-triangle"></i><b>Error: </b> por favor rellene el formulario correctamente</p>
+      </div>
+     <div class="botones" id="botones">
+	         <button type="submit" class="formulario_btn">Crear</button>
+	         <button type="submit" class="formulario_btn">Consultar</button>
+	         <button type="submit" class="formulario_btn">Actualizar</button>
+	         <button type="submit" class="formulario_btn">Eliminar</button>
+    </div>
+  </form>
+</main>
 
- <div>
- <form>
- <input type="text" name="btnnit" value="Nit" placeholder="Ingrese nit">
- <input type="text" name="btnnombre" value="Nombre Completo" placeholder="Ingrese nombre">
- <input type="text" name="btndireccion" value="Direccion" placeholder="Ingresar Direccion">
- <input type="text" name="btntelefono" value="Telefono" placeholder="Ingresar Telefono ">
- <input type="text" name="btncorreo" value="correo"placeholder="Ingresar correo">
- <input type="submit"name="btncrear"value="Crear">
- <input type="submit" name="btnconsultar"value="Consultar">
- <input type="submit" name="btnactualizar"value="Actualizar">
- <input type="submit" name="btnborrar"value="Eliminar">
- 
- 
- </form>
- 
- 
- 
- 
- </div>
 
 
 
 
-
-</header>
-
+<script src="https://kit.fontawesome.com/9a15d400d4.js" crossorigin="anonymous"></script>
 </body>
 </html>
 
