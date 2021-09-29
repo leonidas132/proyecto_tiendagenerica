@@ -15,6 +15,7 @@
     <nav class="nav">
       <ul >
           <li><a href="menuprincipla.jsp"class="nav_inicio">Inicio</a></li>
+          <h1>Registro de Proveedor</h1>
      </ul>
     </nav>
  </div>
@@ -80,10 +81,10 @@
          <p ><i class="fas fa-exclamation-triangle"></i><b>Error: </b> por favor rellene el formulario correctamente</p>
       </div>
      <div class="botones" id="botones">
-	         <button type="submit" class="formulario_btn">Crear</button>
-	         <button type="submit" class="formulario_btn">Consultar</button>
-	         <button type="submit" class="formulario_btn">Actualizar</button>
-	         <button type="submit" class="formulario_btn">Eliminar</button>
+	         <button type="submit" class="formulario_btn4">Crear</button>
+	         <button type="submit" class="formulario_btn3">Consultar</button>
+	         <button type="submit" class="formulario_btn2">Actualizar</button>
+	         <button type="submit" class="formulario_btn1">Eliminar</button>
     </div>
   </form>
 </main>
