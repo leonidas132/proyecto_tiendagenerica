@@ -17,7 +17,10 @@ public class ClientesDTO {
 		Nombre_Cliente = nombre_Cliente;
 		Telefono_Cliente = telefono_Cliente;
 	}
-
+	
+	public ClientesDTO(long cedula_Cliente) {
+		Cedula_Cliente = cedula_Cliente;
+	}
 
 	public long getCedula_Cliente() {
 		return Cedula_Cliente;
@@ -67,10 +70,6 @@ public class ClientesDTO {
 	public void setTelefono_Cliente(String telefono_Cliente) {
 		Telefono_Cliente = telefono_Cliente;
 	}
-	
-	
-	
-	
 }
 
 
