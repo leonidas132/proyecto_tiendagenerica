@@ -17,6 +17,8 @@ body{
 	position: relative;
 }
 ul{
+	width: auto;
+	height: 40px;
 	margin: 0;
 	list-style: none;
 	padding:  0;
@@ -39,7 +41,7 @@ li:hover{
 }
 
 h1 {
-	padding: 50px;
+	padding: 30px;
 	
 	display: flex;
 	justify-content: center;
@@ -52,7 +54,7 @@ h1 {
 
 
 main{
-	max-width:800px;
+	max-width: 800px;
 	width: 100%;
 	margin: auto;
 	padding: 40px;
@@ -114,7 +116,7 @@ formulario__grupo-input{
 	bottom: 15px;
 	z-index: 100;
 	font-size: 10px;
-	opacity: 0;
+	/*opacity: 0;*/
 	
 }
 .formulario_mensaje,
@@ -145,7 +147,7 @@ formulario_grupo-btn-opciones{
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
-	padding: 90px;
+	padding: 70px;
 	padding-left: 10px;
 }
 
@@ -184,9 +186,59 @@ formulario_grupo-btn-opciones{
 	background-color:#009999;
 	font-size: 20px;
 	display: block;
-	padding: 10px 30px;
+	padding: 10px 25px;
 	color: #fff;
 	text-decoration:none;
 	border-radius: 6px;
 	
+}
+
+.formulario__grupo-correcto .formulario__validacion-estado{
+	color:#1ed12d;
+	opacity: 1;
+	
+}
+.contenedor_tabla{
+	
+	margin:50px auto;
+	width:23%;
+	;
+}
+h2{
+	text-align: center;
+   left:50%;
+	top:50%;
+	transform: translatex(-5%) translatey(20%);	
+}
+
+
+th{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	 text-align:left;
+	width: 100%;
+	padding: 5px;
+    left:50%;
+	top:50%;
+	transform: translatex(1%) translatey(-3%);
+	background: rgba(11, 88, 168, 0.59);
+}
+th{
+	display:flex;
+	text-align: left;
+	border: 2px solid #fff;
+}
+.midificar{
+ padding-left: 0;
+ left: 0;
+}
+td{
+	
+	width: 70%;
+	padding: 0;
+	text-align: center;
+    border: 2px solid #fff;
+    border-left: 50px;
+    background: rgba(11, 88, 168, 0.59);
 }

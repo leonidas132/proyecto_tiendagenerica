@@ -67,6 +67,7 @@ public class CRUDClientes extends HttpServlet {
 			else {
 				JOptionPane.showMessageDialog(null, "Error, Cliente no ingresado");
 			}
+			
 		}
 		
 		//Buscar Usuarios
