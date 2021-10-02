@@ -28,7 +28,7 @@
     <nav class="nav">
       <ul >
           <li><a href="menuprincipla.jsp"class="nav_inicio">Inicio</a></li>
-          <h1>Datos de Proveedor</h1>
+          <h1> Datos de Proveedor </h1>
      </ul>
     </nav>
  </div>
