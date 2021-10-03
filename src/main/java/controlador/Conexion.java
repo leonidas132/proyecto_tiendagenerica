@@ -17,7 +17,7 @@ public class Conexion {
 			System.out.println("Error en Driver" + e);
 		}
 		try {
-			cnn=DriverManager.getConnection("jdbc:mysql://localhost/tiendagenerica","root","");
+			cnn=DriverManager.getConnection("jdbc:mysql://localhost/tiendagenerica","root","Axel2013");
 			System.out.println("Conexion Ok");
 		} catch (SQLException e) {
 			System.out.println("Error con la URL" + e);
