@@ -38,7 +38,7 @@ public class CRUDClientes extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		boolean X;
-		long Cedula_Cliente;
+		String Cedula_Cliente;
 		String Direccion_Cliente;
 		String Email_Cliente;
 		String Nombre_Cliente;
@@ -52,7 +52,7 @@ public class CRUDClientes extends HttpServlet {
 		
 		//Ingresar Clientes
 		if(request.getParameter("Crear")!=null) {
-			Cedula_Cliente=Long.parseLong(request.getParameter("Cedula"));
+			Cedula_Cliente=request.getParameter("Cedula");
 			Direccion_Cliente=request.getParameter("Direccion");
 			Email_Cliente=request.getParameter("Correo");
 			Nombre_Cliente=request.getParameter("Nombre");
@@ -72,13 +72,13 @@ public class CRUDClientes extends HttpServlet {
 		
 		//Buscar Usuarios
 		if(request.getParameter("Buscar")!=null) {
-			long Cedula;
+			String Cedula;
 			String Direccion;
 			String Email;
 			String Nombre;
 			String Telefono;
 			
-			Cedula_Cliente=Long.parseLong(request.getParameter("Cedula"));
+			Cedula_Cliente=request.getParameter("Cedula");
 			clidto=new ClientesDTO(Cedula_Cliente);
 			clidao= new ClientesDAO();
 			
@@ -104,7 +104,7 @@ public class CRUDClientes extends HttpServlet {
 		//Modificar Usuarios
 		if(request.getParameter("Actualizar")!=null) {
 			int Dat;
-			Cedula_Cliente=Long.parseLong(request.getParameter("Cedula"));
+			Cedula_Cliente=request.getParameter("Cedula");
 			Direccion_Cliente=request.getParameter("Direccion");
 			Email_Cliente=request.getParameter("Correo");
 			Nombre_Cliente=request.getParameter("Nombre");
@@ -125,7 +125,7 @@ public class CRUDClientes extends HttpServlet {
 		//Eliminar usuarios
 		if(request.getParameter("Borrar")!=null) {
 			int x=0;
-			Cedula_Cliente=Long.parseLong(request.getParameter("Cedula"));
+			Cedula_Cliente=request.getParameter("Cedula");
 			clidto =new ClientesDTO(Cedula_Cliente);
 			clidao =new ClientesDAO();
 			

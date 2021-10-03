@@ -2,14 +2,14 @@ package modelo;
 
 public class ClientesDTO {
 	
-	private long Cedula_Cliente;
+	private String Cedula_Cliente;
 	private String Direccion_Cliente;
 	private String Email_Cliente;
 	private String Nombre_Cliente;
 	private String Telefono_Cliente;
 	
 	
-	public ClientesDTO(long cedula_Cliente, String direccion_Cliente, String email_Cliente, String nombre_Cliente,
+	public ClientesDTO(String cedula_Cliente, String direccion_Cliente, String email_Cliente, String nombre_Cliente,
 			String telefono_Cliente) {
 		Cedula_Cliente = cedula_Cliente;
 		Direccion_Cliente = direccion_Cliente;
@@ -18,16 +18,16 @@ public class ClientesDTO {
 		Telefono_Cliente = telefono_Cliente;
 	}
 	
-	public ClientesDTO(long cedula_Cliente) {
+	public ClientesDTO(String cedula_Cliente) {
 		Cedula_Cliente = cedula_Cliente;
 	}
 
-	public long getCedula_Cliente() {
+	public String getCedula_Cliente() {
 		return Cedula_Cliente;
 	}
 
 
-	public void setCedula_Cliente(long cedula_Cliente) {
+	public void setCedula_Cliente(String cedula_Cliente) {
 		Cedula_Cliente = cedula_Cliente;
 	}
 
