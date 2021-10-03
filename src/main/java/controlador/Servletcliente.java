@@ -68,7 +68,7 @@ public class Servletcliente extends HttpServlet {
 			else {
 				System.out.println("error en el ingreso");
 			}
-			response.sendRedirect("Index.jsp");
+			response.sendRedirect("interface_cliente.jsp");
 		}
 		//consultar cliente//
 		if (request.getParameter("consultar")!=null) {
@@ -83,7 +83,7 @@ public class Servletcliente extends HttpServlet {
 				Telefono=clientedto.getTelefono_Cliente();
 				Email=clientedto.getEmail_Cliente();
 				System.out.println(Telefono);
-				response.sendRedirect("Index.jsp?Cedula="+Cedula+"&&Nombre="+Nombre+"&&Direccion="+Direccion+"&&Telefono="+Telefono+"&&Email="+Email);
+				response.sendRedirect("interface_cliente.jsp?Cedula="+Cedula+"&&Nombre="+Nombre+"&&Direccion="+Direccion+"&&Telefono="+Telefono+"&&Email="+Email);
 			}
 			else {
 				System.out.println("error en la consulta");
@@ -112,7 +112,7 @@ public class Servletcliente extends HttpServlet {
 			else {
 				System.out.println("Error en la actualizacion");
 			}
-			response.sendRedirect("Index.jsp");
+			response.sendRedirect("interface_cliente.jsp");
 			}
 		
 		//ELIMINAR//
@@ -128,7 +128,7 @@ public class Servletcliente extends HttpServlet {
 			else {
 				System.out.println("Error al eliminar");
 			}
-			response.sendRedirect("Index.jsp");
+			response.sendRedirect("interface_cliente.jsp");
 	}
 		
 		
