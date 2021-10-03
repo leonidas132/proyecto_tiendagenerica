@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-  
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +11,9 @@
 <title>Datos_Clientes</title>
 		
 		<style>
+		@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
 		body{
+		
 			font-family: 'Squada One', cursive;
 			font-size: 15px;
 			color:#F3F1FB ;
