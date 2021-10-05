@@ -38,7 +38,7 @@ public class CRUDClientes extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		boolean X;
-		String Cedula_Cliente;
+		Long Cedula_Cliente;
 		String Direccion_Cliente;
 		String Email_Cliente;
 		String Nombre_Cliente;
@@ -54,7 +54,7 @@ public class CRUDClientes extends HttpServlet {
 		if(request.getParameter("Crear")!=null) {
 			Cedula_Cliente=request.getParameter("Cedula");
 			Direccion_Cliente=request.getParameter("Direccion");
-			Email_Cliente=request.getParameter("Correo");
+			Email_Cliente=request.getParameter("Email");
 			Nombre_Cliente=request.getParameter("Nombre");
 			Telefono_Cliente=request.getParameter("Telefono");
 			
@@ -72,7 +72,7 @@ public class CRUDClientes extends HttpServlet {
 		
 		//Buscar Usuarios
 		if(request.getParameter("Buscar")!=null) {
-			String Cedula;
+			long Cedula;
 			String Direccion;
 			String Email;
 			String Nombre;
@@ -106,7 +106,7 @@ public class CRUDClientes extends HttpServlet {
 			int Dat;
 			Cedula_Cliente=request.getParameter("Cedula");
 			Direccion_Cliente=request.getParameter("Direccion");
-			Email_Cliente=request.getParameter("Correo");
+			Email_Cliente=request.getParameter("Email");
 			Nombre_Cliente=request.getParameter("Nombre");
 			Telefono_Cliente=request.getParameter("Telefono");
 			

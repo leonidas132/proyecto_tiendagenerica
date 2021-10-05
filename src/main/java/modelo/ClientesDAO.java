@@ -20,7 +20,7 @@ public class ClientesDAO {
 			boolean dat=false;
 			try {
 				ps=cnn.prepareStatement("INSERT INTO clientes Values(?,?,?,?,?)");
-				ps.setString(1, cli.getCedula_Cliente());
+				ps.setLong(1, cli.getCedula_Cliente());
 				ps.setString(2, cli.getDireccion_Cliente());
 				ps.setString(3, cli.getEmail_Cliente());
 				ps.setString(4, cli.getNombre_Cliente());
@@ -42,10 +42,10 @@ public class ClientesDAO {
 		public ClientesDTO Consultar(ClientesDTO cli) {
 			try {
 				ps=cnn.prepareStatement("SELECT * FROM clientes WHERE cedula_cliente=?");
-				ps.setString(1, cli.getCedula_Cliente());
+				ps.setLong(1, cli.getCedula_Cliente());
 				rs=ps.executeQuery();
 			if(rs.next()) {
-				clientedto=new ClientesDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+				clientedto=new ClientesDTO(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
 			}
 				else {
 					return null;
@@ -66,7 +66,7 @@ public class ClientesDAO {
 				ps.setString(2, cli.getEmail_Cliente());
 				ps.setString(3, cli.getNombre_Cliente());
 				ps.setString(4, cli.getTelefono_Cliente());
-				ps.setString(5, cli.getCedula_Cliente());
+				ps.setLong(5, cli.getCedula_Cliente());
 				x=ps.executeUpdate();
 				
 			} catch (SQLException e) {
@@ -82,7 +82,7 @@ public class ClientesDAO {
 			int x=0;
 			try {
 				ps=cnn.prepareStatement("DELETE FROM clientes WHERE cedula_cliente=?");
-				ps.setString(1, cli.getCedula_Cliente());
+				ps.setLong(1, cli.getCedula_Cliente());
 				x=ps.executeUpdate();
 				
 			} catch (SQLException e) {

@@ -21,6 +21,7 @@
   	    <li><a href="#" class="nav_producto">Productos</a></li>
   	    <li> <a href="#" class="nav_ventas">Ventas</a></li>
   	    <li><a href="#" class="nav_reportes">Reportes</a></li>
+  	    <li><a href="index.jsp" class="nav_reportes">Salir</a></li>
       </ul>
    </nav>
 

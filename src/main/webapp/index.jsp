@@ -26,10 +26,10 @@
     
 </head>
 <body>
+<form action="InicioSesion" method="post">
     <section>
         <div class="form-container">
             	<h1>Tienda Genérica</h1>
-       		 <form action="validar.jsp" method="post">
            		 <div class="control">
             		<p>Usuario</p>
             
@@ -39,9 +39,8 @@
             		<input type="submit" class="btn" value="Aceptar">
            			<input type="submit" class="btn" value="Cancelar">
             	</div>
-        	 </form>
-        	
-        </div>
+        	     </div>
     </section>
+    </form>
 </body>
 </html>
