@@ -30,6 +30,23 @@
 </head>
 
 <body>
+
+
+
+<%
+
+String Cedula="";
+String Direccion="", Email="", Nombre="", Telefono="";
+
+if(request.getParameter("Cedula")!=null){
+	Cedula=String.valueOf(request.getParameter("Cedula"));
+	Direccion=request.getParameter("Direccion");
+	Email=request.getParameter("Email");
+	Nombre=request.getParameter("Nombre");
+	Telefono=request.getParameter("Telefono");	
+}
+
+%>
 	 
 
 <header class="container">
@@ -55,7 +72,7 @@
       <div class="formulario__grupo" id="grupo_Cedula">
          <label for="cedula" class="formulario__label">Cedula</label>
           <div class="formulario__grupo-input">
-             <input type="text" name="Cedula" class="formulario__input"  id="Cedula" placeholder="ingrese Cedula">
+             <input type="text" name="Cedula" value="<%=Cedula %>" class="formulario__input"  id="Cedula" placeholder="ingrese Cedula">
                <i class="formulario__validacion-estado fas fa-times-circle"></i>
          </div>
          <p class="formulario__input-error">solo numeros</p>
@@ -66,7 +83,7 @@
       <div class="formulario__grupo" id="grupo__nombre">
            <label for="nombre" class="formulario__label">Nombre</label>
            <div class="formulario__grupo-input">
-                <input type="text" name="Nombre" class="formulario__input" id="nombre" placeholder="ingrese nombre">
+                <input type="text" name="Nombre" value="<%=Nombre %>" class="formulario__input" id="nombre" placeholder="ingrese nombre">
                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
        	   </div>
            <p class="formulario__input-error">El nombretiene que ser de 4 a 20 digitos y solo puede contener  letras </p>
@@ -77,7 +94,7 @@
       <div class="formulario__grupo" id="grupo__direccion">
          <label for="direccion" class="formulario__label">Direccion</label>
          <div class="formulario__grupo-input">
-             <input type="text" name="Direccion" class="formulario__input"  id="direccion" placeholder="direccion">
+             <input type="text" name="Direccion" value="<%=Direccion %>" class="formulario__input"  id="direccion" placeholder="direccion">
              <i class="formulario__validacion-estado fas fa-times-circle"></i>
          </div>
          <p class="formulario__input-error">La direccion tiene que ser de 10 a 20 digitos y solo puede contener numeros, letras </p>
@@ -88,7 +105,7 @@
       <div class="formulario__grupo" id="grupo__telefono">
          <label for="telefono" class="formulario__label">Telefono</label>
          <div class="formulario__grupo-input">
-             <input type="text" name="Telefono" class="formulario__input" id="telefono" placeholder="12358955">
+             <input type="text" name="Telefono" value="<%=Telefono %>" class="formulario__input" id="telefono" placeholder="12358955">
              <i class="formulario__validacion-estado fas fa-times-circle"></i>
          </div>
          <p class="formulario__input-error">El telefono tiene que ser de 14 digitos </p>  
@@ -99,7 +116,7 @@
       <div class="formulario__grupo-1" id="grupo__email">
           <label for="e-mail" class="formulario__label">Email</label>
           <div class="formulario__grupo-input">
-             <input type="text" name="Email" class="formulario__input" id="Email" placeholder="ejemplo@">
+             <input type="text" name="Email" value="<%=Email %>" class="formulario__input" id="Email" placeholder="ejemplo@">
              <i class="formulario__validacion-estado fas fa-times-circle"></i>
          </div>
          <p class="formulario__input-error">Este campo debe contener de 10 a 20 digitos y solo pueden contenr letras  </p>  

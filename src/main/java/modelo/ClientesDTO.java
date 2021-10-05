@@ -11,13 +11,14 @@ public class ClientesDTO {
 	
 	public ClientesDTO(long cedula_Cliente, String direccion_Cliente, String email_Cliente, String nombre_Cliente,
 			String telefono_Cliente) {
+		super();
 		Cedula_Cliente = cedula_Cliente;
 		Direccion_Cliente = direccion_Cliente;
 		Email_Cliente = email_Cliente;
 		Nombre_Cliente = nombre_Cliente;
 		Telefono_Cliente = telefono_Cliente;
 	}
-	
+
 	public ClientesDTO(long cedula_Cliente) {
 		Cedula_Cliente = cedula_Cliente;
 	}

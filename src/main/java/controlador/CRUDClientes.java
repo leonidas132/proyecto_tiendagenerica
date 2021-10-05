@@ -16,7 +16,6 @@ import modelo.ClientesDTO;
  */
 @WebServlet("/CRUDClientes")
 public class CRUDClientes extends HttpServlet {
-	private static final long serialVersionUID = 1L;
 
     /**
      * Default constructor. 
@@ -52,7 +51,7 @@ public class CRUDClientes extends HttpServlet {
 		
 		//Ingresar Clientes
 		if(request.getParameter("Crear")!=null) {
-			Cedula_Cliente=request.getParameter("Cedula");
+			Cedula_Cliente=Long.parseLong(request.getParameter("Cedula"));
 			Direccion_Cliente=request.getParameter("Direccion");
 			Email_Cliente=request.getParameter("Email");
 			Nombre_Cliente=request.getParameter("Nombre");
@@ -78,7 +77,7 @@ public class CRUDClientes extends HttpServlet {
 			String Nombre;
 			String Telefono;
 			
-			Cedula_Cliente=request.getParameter("Cedula");
+			Cedula_Cliente=Long.parseLong(request.getParameter("Cedula"));
 			clidto=new ClientesDTO(Cedula_Cliente);
 			clidao= new ClientesDAO();
 			
@@ -92,7 +91,7 @@ public class CRUDClientes extends HttpServlet {
 				Email=registro.getEmail_Cliente();
 				Nombre=registro.getNombre_Cliente();
 				Telefono=registro.getTelefono_Cliente();
-				response.sendRedirect("index.jsp?Cedula="+Cedula+"&&Direccion="+Direccion+"&&Email="+Email+"&&Nombre"
+				response.sendRedirect("interface_cliente.jsp?Cedula="+Cedula+"&&Direccion="+Direccion+"&&Email="+Email+"&&Nombre"
 				+Nombre+"&&Telefono"+Telefono);
 			}
 			else {
@@ -104,7 +103,7 @@ public class CRUDClientes extends HttpServlet {
 		//Modificar Usuarios
 		if(request.getParameter("Actualizar")!=null) {
 			int Dat;
-			Cedula_Cliente=request.getParameter("Cedula");
+			Cedula_Cliente=Long.parseLong(request.getParameter("Cedula"));
 			Direccion_Cliente=request.getParameter("Direccion");
 			Email_Cliente=request.getParameter("Email");
 			Nombre_Cliente=request.getParameter("Nombre");
@@ -125,7 +124,7 @@ public class CRUDClientes extends HttpServlet {
 		//Eliminar usuarios
 		if(request.getParameter("Borrar")!=null) {
 			int x=0;
-			Cedula_Cliente=request.getParameter("Cedula");
+			Cedula_Cliente=Long.parseLong(request.getParameter("Cedula"));
 			clidto =new ClientesDTO(Cedula_Cliente);
 			clidao =new ClientesDAO();
 			
