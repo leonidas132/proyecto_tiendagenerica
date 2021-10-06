@@ -53,7 +53,7 @@ public class CRUDClientes extends HttpServlet {
 		if(request.getParameter("Crear")!=null) {
 			Cedula_Cliente=Long.parseLong(request.getParameter("Cedula"));
 			Direccion_Cliente=request.getParameter("Direccion");
-			Email_Cliente=request.getParameter("Email");
+			Email_Cliente=request.getParameter("Correo");
 			Nombre_Cliente=request.getParameter("Nombre");
 			Telefono_Cliente=request.getParameter("Telefono");
 			
@@ -105,7 +105,7 @@ public class CRUDClientes extends HttpServlet {
 			int Dat;
 			Cedula_Cliente=Long.parseLong(request.getParameter("Cedula"));
 			Direccion_Cliente=request.getParameter("Direccion");
-			Email_Cliente=request.getParameter("Email");
+			Email_Cliente=request.getParameter("Correo");
 			Nombre_Cliente=request.getParameter("Nombre");
 			Telefono_Cliente=request.getParameter("Telefono");
 			
