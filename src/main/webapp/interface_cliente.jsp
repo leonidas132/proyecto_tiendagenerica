@@ -36,12 +36,12 @@
 <%
 
 String Cedula="";
-String Direccion="", Email="", Nombre="", Telefono="";
+String Direccion="", Correo="", Nombre="", Telefono="";
 
 if(request.getParameter("Cedula")!=null){
 	Cedula=String.valueOf(request.getParameter("Cedula"));
 	Direccion=request.getParameter("Direccion");
-	Email=request.getParameter("Email");
+	Correo=request.getParameter("Correo");
 	Nombre=request.getParameter("Nombre");
 	Telefono=request.getParameter("Telefono");	
 }
@@ -116,7 +116,7 @@ if(request.getParameter("Cedula")!=null){
       <div class="formulario__grupo-1" id="grupo__email">
           <label for="e-mail" class="formulario__label">Email</label>
           <div class="formulario__grupo-input">
-             <input type="text" name="Email" value="<%=Email %>" class="formulario__input" id="Email" placeholder="ejemplo@">
+          <input class="formulario__input" id="Email" type="text" name="Correo" value="<%=Correo %>" placeholder=Email>
              <i class="formulario__validacion-estado fas fa-times-circle"></i>
          </div>
          <p class="formulario__input-error">Este campo debe contener de 10 a 20 digitos y solo pueden contenr letras  </p>  
