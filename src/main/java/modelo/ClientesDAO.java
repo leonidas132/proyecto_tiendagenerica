@@ -26,7 +26,7 @@ public class ClientesDAO {
 				ps.setString(4, cli.getNombre_Cliente());
 				ps.setString(5, cli.getTelefono_Cliente());
 				r=ps.executeUpdate();
-				
+				System.out.println(r);
 				if(r>0) {
 					dat=true;
 				}

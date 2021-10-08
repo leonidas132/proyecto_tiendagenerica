@@ -3,20 +3,22 @@ package modelo;
 public class ClientesDTO {
 	
 	private long Cedula_Cliente;
-	private String Direccion_Cliente;
-	private String Email_Cliente;
 	private String Nombre_Cliente;
+	private String Direccion_Cliente;
 	private String Telefono_Cliente;
+	private String Email_Cliente;
 	
 	
-	public ClientesDTO(long cedula_Cliente, String direccion_Cliente, String email_Cliente, String nombre_Cliente,
-			String telefono_Cliente) {
-		super();
-		Cedula_Cliente = cedula_Cliente;
-		Direccion_Cliente = direccion_Cliente;
-		Email_Cliente = email_Cliente;
-		Nombre_Cliente = nombre_Cliente;
-		Telefono_Cliente = telefono_Cliente;
+	
+	
+	public ClientesDTO(long cedula_Cliente,String nombre_Cliente, String direccion_Cliente,String telefono_Cliente, String email_Cliente 
+			) {
+	
+		this.Cedula_Cliente = cedula_Cliente;
+		this.Nombre_Cliente = nombre_Cliente;
+		this.Direccion_Cliente = direccion_Cliente;
+	    this.Telefono_Cliente = telefono_Cliente;
+		this.Email_Cliente = email_Cliente;
 	}
 
 	public ClientesDTO(long cedula_Cliente) {

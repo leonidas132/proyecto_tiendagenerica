@@ -52,15 +52,15 @@ public class CRUDClientes extends HttpServlet {
 		//Ingresar Clientes
 		if(request.getParameter("Crear")!=null) {
 			Cedula_Cliente=Long.parseLong(request.getParameter("Cedula"));
-			Direccion_Cliente=request.getParameter("Direccion");
-			Email_Cliente=request.getParameter("Email");
 			Nombre_Cliente=request.getParameter("Nombre");
+			Direccion_Cliente=request.getParameter("Direccion");
 			Telefono_Cliente=request.getParameter("Telefono");
-			
-			clidto=new ClientesDTO(Cedula_Cliente, Direccion_Cliente, Email_Cliente, Nombre_Cliente, Telefono_Cliente);
+			Email_Cliente=request.getParameter("Email");
+		    clidto=new ClientesDTO(Cedula_Cliente,Nombre_Cliente, Direccion_Cliente,Telefono_Cliente, Email_Cliente  );
 			clidao=new ClientesDAO();
 			X=clidao.insertarClientes(clidto);
-			if(X){
+		
+			if(X==true){
 				JOptionPane.showMessageDialog(null, "Se Agrego sin problemas");
 			}
 			else {

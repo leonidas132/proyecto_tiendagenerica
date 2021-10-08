@@ -7,21 +7,26 @@
 <meta charset="ISO-8859-1">
 <meta http-equiv="X-AU-Compatible" content="IE=edge">
 <meta name="viewport" content="widht=device-width, initial-scale= 1.0">
-<title>Insert title here</title>
+<title>Menu Principal</title>
 
 </head>
 <body>
+
+
+
+
+
 <header class="vista">
   <div class="container">
     <nav class="nav">
       <ul>
-        <li>  <a href="#" class="nav_usuario">Usuario</a> </li>	
+        <li>  <a href="interfaceUsuario.jsp" class="nav_usuario">Usuario</a> </li>	
         <li> <a href="interface_cliente.jsp" class="nav_cliente">Cliente </a></li>
   	    <li><a href="interfaceproveedor.jsp" class="nav_proveedor">Proveedor</a></li>
   	    <li><a href="#" class="nav_producto">Productos</a></li>
   	    <li> <a href="#" class="nav_ventas">Ventas</a></li>
   	    <li><a href="#" class="nav_reportes">Reportes</a></li>
-  	    <li><a href="index.jsp" class="nav_reportes">Salir</a></li>
+  	    <li><a href="interfaceprincipal.jsp" class="nav_reportes">Salir</a></li>
       </ul>
    </nav>
 

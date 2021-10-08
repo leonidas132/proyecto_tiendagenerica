@@ -27,26 +27,27 @@ public class InicioSesion extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
-		String username = request.getParameter("usu");
-		String password = request.getParameter("pass");
-		
-		
-		if(username.equals("admininicial")&& password.equals("123456")) {
-			response.sendRedirect("menuprincipla.jsp");
+		String username,password ; 
+		 username = request.getParameter("usu");
+		 password = request.getParameter("pass");
+		 if(username.equals("admininicial")&& password.equals("123456")) {
+			System.out.println ("datos enviados");
+			response.sendRedirect("interface_cliente.jsp");
 			
 		}
 		
 		else {
-			response.sendRedirect("Nuevamente.html");
+			response.sendRedirect("index.jsp");
 		} 
+		
+	
 	}
 
 }

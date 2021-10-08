@@ -8,7 +8,7 @@
 <meta charset="ISO-8859-1">
 <meta http-equiv="X-AU-Compatible"content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Datos proveedor</title>
+<title>Datos Proveedor</title>
 </head>
 <body>
  <%
@@ -28,7 +28,7 @@
     <nav class="nav">
       <ul >
           <li><a href="menuprincipla.jsp"class="nav_inicio">Inicio</a></li>
-          <h1> Datos de Proveedor </h1>
+          <h1> Datos del Proveedor</h1>
      </ul>
     </nav>
  </div>
