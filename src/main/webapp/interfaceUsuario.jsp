@@ -22,7 +22,7 @@
  </header>
   <main>
  
-     <form action="" class="formulario" id="formulario">
+     <form action="CRUDUsuarios" class="formulario" id="formulario" method="post">
      
             <!-- grupo cedula -->
        <div class="formulario__grupo " id="grupo__cedula">

@@ -53,12 +53,12 @@ public class CRUDUsuarios extends HttpServlet {
 		
 		
 		//Insertar Usuarios
-		if(request.getParameter("Crear")!=null) {
-			Usuario_Cedula=Long.parseLong(request.getParameter("Cedula_Usuario"));
-			Email_Usuario=request.getParamet("Email_Usuario");
-			Nombre_Usuario=request.getParamet("Nombre_Usuario");
-			Password=request.getParamet("Password");
-			Usuario=request.getParamet("Usuario");
+		if(request.getParameter("crear")!=null) {
+			Usuario_Cedula=Long.parseLong(request.getParameter("cedula"));
+			Email_Usuario=request.getParameter("gmail");
+			Nombre_Usuario=request.getParameter("nombre");
+			Password=request.getParameter("password2");
+			Usuario=request.getParameter("usuario");
 			
 			usdto = new UsuariosDTO(Usuario_Cedula, Email_Usuario, Nombre_Usuario, Password, Usuario);
 			usdao = new UsuariosDAO();
@@ -73,14 +73,14 @@ public class CRUDUsuarios extends HttpServlet {
 		}
 		
 		// Buscar Usuarios
-		if(request.getParameter("Buscar")!=null) {
+		if(request.getParameter("consultar")!=null) {
 			long Cedula;
 			String Email;
 			String Nombre;
 			String Clave;
 			String User;
 			
-			Usuario_Cedula=Long.parseLong(request.getParameter("Cedula_Usuario"));
+			Usuario_Cedula=Long.parseLong(request.getParameter("cedula"));
 			usdto  = new UsuariosDTO(Usuario_Cedula);
 			usdao = new UsuariosDAO();
 			
@@ -102,12 +102,12 @@ public class CRUDUsuarios extends HttpServlet {
 		
 		
 		// Actualizar Usuarios
-		if(request.getParameter("Modificar")!=null) {
-			Usuario_Cedula=Long.parseLong(request.getParameter("Cedula_Usuario"));
-			Email_Usuario=request.getParamet("Email_Usuario");
-			Nombre_Usuario=request.getParamet("Nombre_Usuario");
-			Password=request.getParamet("Password");
-			Usuario=request.getParamet("Usuario");
+		if(request.getParameter("actualizar")!=null) {
+			Usuario_Cedula=Long.parseLong(request.getParameter("cedula"));
+			Email_Usuario=request.getParameter("gmail");
+			Nombre_Usuario=request.getParameter("nombre");
+			Password=request.getParameter("password2");
+			Usuario=request.getParameter("usuario");
 			
 			usdto = new UsuariosDTO(Usuario_Cedula, Email_Usuario, Nombre_Usuario, Password, Usuario);
 			usdao = new UsuariosDAO();
@@ -121,8 +121,8 @@ public class CRUDUsuarios extends HttpServlet {
 		
 		
 		//Eliminar Usuarios
-		if(request.getParameter("Eliminar")!=null) {
-			Usuario_Cedula=Long.parseLong(request.getParameter("Cedula_Usuario"));
+		if(request.getParameter("eliminar")!=null) {
+			Usuario_Cedula=Long.parseLong(request.getParameter("cedula"));
 			usdto =new UsuariosDTO(Usuario_Cedula);
 			usdao =new UsuariosDAO();
 			
