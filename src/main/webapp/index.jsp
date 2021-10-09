@@ -27,16 +27,16 @@
 </head>
 <body>
 
-<form action="InicioSesion" method="post">
+<form action="inicioSesion" method="post">
     <section>
         <div class="form-container">
             	<h1>Tienda Genérica</h1>
             	
            		 <div class="control">
             		<p>Usuario</p>
-                    <input type="text" name="usu" placeholder="Ingrese nombre de usuario" required >
+                    <input type="text" name="userId" placeholder="Ingrese nombre de usuario" required >
             		<p>Contraseña</p>
-            		<input type="password" name="pass" placeholder="*******" required>
+            		<input type="password" name="contra" placeholder="*******" required>
             		<input type="submit" class="btn" value="Aceptar">
            			<input type="submit" class="btn" value="Cancelar" href="interfaceprincipal">
             	</div>

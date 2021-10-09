@@ -6,18 +6,19 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 /**
- * Servlet implementation class InicioSesion
+ * Servlet implementation class inicioSesion
  */
-@WebServlet("/InicioSesion")
-public class InicioSesion extends HttpServlet {
+@WebServlet("/inicioSesion")
+public class inicioSesion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * Default constructor. 
      */
-    public InicioSesion() {
+    public inicioSesion() {
         // TODO Auto-generated constructor stub
     }
 
@@ -34,16 +35,20 @@ public class InicioSesion extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
 		String username,password ; 
-		 username = request.getParameter("usu");
-		 password = request.getParameter("pass");
+		 username = request.getParameter("userId");
+		 password = request.getParameter("contra");
+		 
 		 if(username.equals("admininicial")&& password.equals("123456")) {
-			System.out.println ("datos enviados");
-			response.sendRedirect("interface_cliente.jsp");
+			JOptionPane.showMessageDialog(null, "Correcto");
+			response.sendRedirect("menuprincipla.jsp");
 			
 		}
 		
 		else {
+			System.out.println ("datos enviados");
 			response.sendRedirect("index.jsp");
 		} 
 		
