@@ -39,7 +39,7 @@ public class Ingresar extends HttpServlet {
 		usuario=request.getParameter("userId");
 		clave=request.getParameter("contra");
 		
-		if (usuario.equals("admin")&& clave.equals("123456")) {
+		if (usuario.equals("admininicial")&& clave.equals("123456")) {
 			response.sendRedirect("menuprincipla.jsp");
 			
 		}else
