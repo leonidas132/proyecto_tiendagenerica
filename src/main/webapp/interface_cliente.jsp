@@ -40,10 +40,10 @@ String Direccion="", Correo="", Nombre="", Telefono="";
 
 if(request.getParameter("Cedula")!=null){
 	Cedula=String.valueOf(request.getParameter("Cedula"));
-	Direccion=request.getParameter("Direccion");
-	Correo=request.getParameter("Correo");
 	Nombre=request.getParameter("Nombre");
+	Direccion=request.getParameter("Direccion");
 	Telefono=request.getParameter("Telefono");	
+	Correo=request.getParameter("Correo");
 }
 
 %>

@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
+import org.apache.catalina.connector.Response;
+
 import modelo.UsuariosDAO;
 import modelo.UsuariosDTO;
 
@@ -66,10 +68,11 @@ public class CRUDUsuarios extends HttpServlet {
 			X=usdao.InsertarUsuarios(usdto);
 			if(X) {
 				JOptionPane.showMessageDialog(null, "Se Ingreso sin Problemas");
-				response.sendRedirect("menuprincipla.jsp");
+				//response.sendRedirect("menuprincipla.jsp");
 				
-			}else 
+			}else {
 				JOptionPane.showMessageDialog(null, "Error al Ingresar usuario");
+			}
 			response.sendRedirect("interfaceUsuario.jsp");
 				
 		}
@@ -97,9 +100,10 @@ public class CRUDUsuarios extends HttpServlet {
 				User=registro.getUsuario();
 				
 			}
-			else
+			else {
 				JOptionPane.showMessageDialog(null, "No hay registros");
-			
+			}
+			response.sendRedirect("menuprincipla.jsp");
 		}
 		
 		
@@ -117,11 +121,11 @@ public class CRUDUsuarios extends HttpServlet {
 			X=usdao.ModificarUsuarios(usdto);
 			if(X) {
 				JOptionPane.showMessageDialog(null, "Se Actualizo sin problemas");
-				//response.sendRedirect("menuprincipla.jsp");
-			}else
+				
+			}else {
 				JOptionPane.showMessageDialog(null, "Problemas Para Actualizar");
-			//response.sendRedirect("interfaceUsuario.jsp");
-		}
+			}
+		}response.sendRedirect("menuprincipla.jsp");
 		
 		
 		//Eliminar Usuarios
@@ -133,11 +137,12 @@ public class CRUDUsuarios extends HttpServlet {
 			X=usdao.EliminarUsuarios(usdto);
 			if(X) {
 				JOptionPane.showMessageDialog(null, "Eliminacion sin Problemas");
-				//response.sendRedirect("menuprincipla.jsp");
-			}else
+				
+			}else {
 				JOptionPane.showMessageDialog(null, "Hay Problemas");
-			//response.sendRedirect("interfaceUsuario.jsp");
+			}
 		}
-	}
+		response.sendRedirect("menuprincipla.jsp");
+	} 
 
 }

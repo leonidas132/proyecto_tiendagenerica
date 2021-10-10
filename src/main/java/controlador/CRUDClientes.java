@@ -55,9 +55,9 @@ public class CRUDClientes extends HttpServlet {
 			Direccion_Cliente=request.getParameter("Direccion");
 			Email_Cliente=request.getParameter("Correo");
 			Nombre_Cliente=request.getParameter("Nombre");
-			Direccion_Cliente=request.getParameter("Direccion");
+			//Direccion_Cliente=request.getParameter("Direccion");
 			Telefono_Cliente=request.getParameter("Telefono");
-			Email_Cliente=request.getParameter("Email");
+			//Email_Cliente=request.getParameter("Email");
 		    clidto=new ClientesDTO(Cedula_Cliente,Nombre_Cliente, Direccion_Cliente,Telefono_Cliente, Email_Cliente  );
 			clidao=new ClientesDAO();
 			X=clidao.insertarClientes(clidto);
@@ -85,17 +85,20 @@ public class CRUDClientes extends HttpServlet {
 			clidao= new ClientesDAO();
 			
 			registro=clidao.Consultar(clidto);
-			
 			if(registro!=null) {
 				
 				
 				Cedula=registro.getCedula_Cliente();
+				//JOptionPane.showMessageDialog(null, Cedula);
 				Direccion=registro.getDireccion_Cliente();
+				//JOptionPane.showMessageDialog(null, Direccion);
 				Email=registro.getEmail_Cliente();
+				//JOptionPane.showMessageDialog(null, Email);
 				Nombre=registro.getNombre_Cliente();
+				//JOptionPane.showMessageDialog(null, Nombre);
 				Telefono=registro.getTelefono_Cliente();
-				response.sendRedirect("interface_cliente.jsp?Cedula="+Cedula+"&&Direccion="+Direccion+"&&Email="+Email+"&&Nombre"
-				+Nombre+"&&Telefono"+Telefono);
+				//JOptionPane.showMessageDialog(null, Telefono);
+				response.sendRedirect("interface_cliente.jsp?Cedula="+Cedula+"&&Direccion"+Direccion+"&&Correo"+Email+"&&Nombre"+Nombre+"&&Telefono"+Telefono);
 			}
 			else {
 				JOptionPane.showMessageDialog(null, "No hay Registros");

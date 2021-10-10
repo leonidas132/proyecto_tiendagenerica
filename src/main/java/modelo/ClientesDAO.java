@@ -45,7 +45,7 @@ public class ClientesDAO {
 				ps.setLong(1, cli.getCedula_Cliente());
 				rs=ps.executeQuery();
 			if(rs.next()) {
-				clientedto=new ClientesDTO(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+				clientedto=new ClientesDTO(rs.getLong(1), rs.getString(4), rs.getString(2), rs.getString(5), rs.getString(3));
 			}
 				else {
 					return null;
@@ -60,8 +60,7 @@ public class ClientesDAO {
 		public int Actualizar (ClientesDTO cli) {
 			int x=0;
 			try {
-				ps=cnn.prepareStatement("UPDATE clientes SET direccion_cliente=?, email_cliente=?, nombre_cliente=?, "
-						+ "telefono_cliente=? WHERE cedula_cliente=?");
+				ps=cnn.prepareStatement("UPDATE clientes SET direccion_cliente=?, email_cliente=?, nombre_cliente=?, telefono_cliente=? WHERE cedula_cliente=?");
 				
 				ps.setString(1, cli.getDireccion_Cliente());
 				ps.setString(2, cli.getEmail_Cliente());
