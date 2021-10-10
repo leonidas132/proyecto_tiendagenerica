@@ -13,8 +13,7 @@ public class ClientesDAO {
 		Connection cnn=con.conexionbd();
 		PreparedStatement ps;
 		ResultSet rs;
-		ClientesDTO clientedto=null;
-		
+		ClientesDTO clientedto = null;
 		
 		public boolean insertarClientes(ClientesDTO cli) {
 			int r;
@@ -27,7 +26,7 @@ public class ClientesDAO {
 				ps.setString(4, cli.getNombre_Cliente());
 				ps.setString(5, cli.getTelefono_Cliente());
 				r=ps.executeUpdate();
-				
+				System.out.println(r);
 				if(r>0) {
 					dat=true;
 				}
@@ -62,7 +61,8 @@ public class ClientesDAO {
 			int x=0;
 			try {
 				ps=cnn.prepareStatement("UPDATE clientes SET direccion_cliente=?, email_cliente=?, nombre_cliente=?, "
-						+ "telefono_cliente=?, WHERE cedula_cliente=?");
+						+ "telefono_cliente=? WHERE cedula_cliente=?");
+				
 				ps.setString(1, cli.getDireccion_Cliente());
 				ps.setString(2, cli.getEmail_Cliente());
 				ps.setString(3, cli.getNombre_Cliente());
